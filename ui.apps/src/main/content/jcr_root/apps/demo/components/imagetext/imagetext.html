@@ -1,0 +1,17 @@
+<div class="cmp-imagetext" 
+	data-sly-use.model="com.accenture.core.models.ImageTextModel">
+    <div class="cmp-imagetext__text-item" data-sly-test="${model.text}">
+        <div class="cmp-imagetext__text-item-output">${model.text}</div>
+    </div>
+    
+    <div class="cmp-imagetext__image-item" data-sly-test="${model.image}">
+    	<img class="cmp-imagetext__image-item-output" 
+    		src="${model.image}" 
+    		alt="${model.imageAlt}"
+    		title="${model.imageTitle} Alfredo"/>
+    </div>
+    
+    <div data-sly-test="${!model.text && !model.image && wcmmode.edit}">
+        <div >Text + Image Component</div>
+    </div>
+</div>

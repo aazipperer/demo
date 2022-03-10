@@ -1,0 +1,6 @@
+{
+  "mobile.resourceTypes": [
+    "demo/components/page"
+  ],
+  "README": "Indicate which page resource types should display the mobile emulators."
+}

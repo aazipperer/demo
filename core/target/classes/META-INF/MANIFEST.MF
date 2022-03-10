@@ -1,0 +1,44 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 11
+Created-By: Maven Integration for Eclipse
+Bundle-Category: Demo
+Bundle-Description: Core bundle for Demo
+Bundle-ManifestVersion: 2
+Bundle-Name: Demo - Core
+Bundle-SymbolicName: demo.core
+Bundle-Version: 1.0.0.SNAPSHOT
+Export-Package: com.accenture.core.filters;version="1.0";uses:="javax.se
+ rvlet",com.accenture.core.listeners;version="1.0";uses:="org.apache.sli
+ ng.api.resource.observation",com.accenture.core.models;version="1.0";us
+ es:="javax.annotation,org.apache.sling.api.resource,org.apache.sling.mo
+ dels.annotations,org.apache.sling.models.annotations.injectorspecific",
+ com.accenture.core.schedulers;version="1.0",com.accenture.core.servlets
+ ;version="1.0";uses:="javax.servlet,org.apache.sling.api,org.apache.sli
+ ng.api.servlets"
+Import-Package: javax.annotation;version="0.0.0",com.accenture.core.filt
+ ers;version="[1.0,2)",com.accenture.core.listeners;version="[1.0,2)",co
+ m.accenture.core.schedulers;version="[1.0,2)",com.accenture.core.servle
+ ts;version="[1.0,2)",com.day.cq.wcm.api;version="[1.29,2)",javax.inject
+ ;version="[1.0,2)",javax.servlet;version="[3.1,4)",org.apache.sling.api
+ ;version="[2.3,3)",org.apache.sling.api.request;version="[2.4,3)",org.a
+ pache.sling.api.resource;version="[2.12,3)",org.apache.sling.api.resour
+ ce.observation;version="[1.2,2)",org.apache.sling.api.servlets;version=
+ "[2.3,3)",org.apache.sling.models.annotations;version="[1.5,2)",org.apa
+ che.sling.models.annotations.injectorspecific;version="[1.1,2)",org.slf
+ 4j;version="[1.7,2)"
+Provide-Capability: osgi.service;objectClass:List<String>="java.lang.Run
+ nable",osgi.service;objectClass:List<String>="javax.servlet.Filter";use
+ s:="javax.servlet",osgi.service;objectClass:List<String>="javax.servlet
+ .Servlet";uses:="javax.servlet",osgi.service;objectClass:List<String>="
+ org.apache.sling.api.resource.observation.ResourceChangeListener";uses:
+ ="org.apache.sling.api.resource.observation"
+Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compone
+ nt)(version>=1.4.0)(!(version>=2.0.0)))",osgi.ee;filter:="(&(osgi.ee=Ja
+ vaSE)(version=1.8))"
+Service-Component: OSGI-INF/com.accenture.core.filters.LoggingFilter.xml
+ ,OSGI-INF/com.accenture.core.listeners.SimpleResourceListener.xml,OSGI-
+ INF/com.accenture.core.schedulers.SimpleScheduledTask.xml,OSGI-INF/com.
+ accenture.core.servlets.SimpleServlet.xml
+Sling-Model-Classes: com.accenture.core.models.HelloWorldModel,com.accen
+ ture.core.models.ImageTextModel
+

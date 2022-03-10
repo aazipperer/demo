@@ -1,0 +1,4 @@
+com\accenture\it\tests\CreatePageIT.class
+com\accenture\it\tests\HtmlUnitClient.class
+com\accenture\it\tests\PublishPageValidationIT.class
+com\accenture\it\tests\GetPageIT.class

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 11
+Implementation-Title: Demo - Repository Structure Package
+Implementation-Version: 1.0.0-SNAPSHOT
+Content-Package-Type: mixed
+Content-Package-Id: com.accenture:demo.ui.apps.structure:1.0.0-SNAPSHOT
+Content-Package-Description: Empty package that defines the structure of
+  the Adobe Experience Manager repository the Code packages in this proj
+ ect deploy into.
+         Any roots in the Code packages of this projec
+ t should have their parent enumerated in the Filters list below.
+Content-Package-Roots: /apps,/apps/cq,/apps/dam,/apps/demo,/apps/msm,/ap
+ ps/settings,/apps/sling,/apps/wcm,/content/dam/demo
+
