@@ -3,6 +3,7 @@ package com.accenture.core.models;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.resource.ValueMap;
@@ -27,16 +28,22 @@ public class ImageTextModel {
 	@Inject
 	private String image;
 
+	@Inject
 	private String imageAlt;
 
+	@Inject
 	private String imageTitle;
 
 	@PostConstruct
 	public void init() {
 		ValueMap imageMetadata = getImageMetadata(image);
 		if (imageMetadata != null) {
-			this.imageAlt = imageMetadata.get("dc:title", String.class);
-			this.imageTitle = imageMetadata.get("dc:description", String.class);
+			if (StringUtils.isEmpty(imageAlt)) {
+				this.imageAlt = imageMetadata.get("dc:title", String.class);
+			}
+			if (StringUtils.isEmpty(imageTitle)) {
+				this.imageTitle = imageMetadata.get("dc:description", String.class);
+			}
 		}
 	}
 

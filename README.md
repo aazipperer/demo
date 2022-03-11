@@ -1,4 +1,4 @@
-# demo
+# Demo
 
 Para iniciar o projeto, apenas é necessário usar o Archetype do Maven:
 
@@ -11,7 +11,6 @@ mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \
  -D appId="demo" \
  -D groupId="com.accenture" \
  -D aemVersion=6.5.12
-
 ```
 
 Depois do projeto criado, existirá apenas a estrutura do projeto na pasta executada, com o nome `demo`:
@@ -27,3 +26,16 @@ A classe java indica um Model já criado, contendo o `text` e a `image` que são
 
 No diretório contendo o componente AEM, temos a `dialog` criada e o `html` do componente, que será renderizado no navegador quando o componente for usado numa página.
 
+## Documentação de apoio
+
+- Core components da Adobe: https://github.com/adobe/aem-core-wcm-components
+- Componentes Granite para consturção de dialogs: developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/server.html
+- Para fazer deploy do código java, executar o comando dentro da pasta core: ´mvn -Padobe-public install -PautoInstallBundle´
+- Para fazer deploy do código do AEM, componentes e configurações, executar na raiz do projeto pai: mvn -Padobe-public install -PautoInstallPackage
+- A linguagem utilizada nos HTMLs se chama HTL, procurando por documentação dela no google acharão exemplos de como utilizar
+- Para acessar a base de dados do AEM: http://localhost:4502/crx/de
+- Para visualizar configurações e estado da aplicação, pode ser acessado (navegar nos menus para ver as opções): http://localhost:4502/system/console
+
+## Desafio a ser implementado
+
+Construir um componente que contenha uma lista de imagens, de preferência em formato de carrossel, podem ser utilizados javascripts de terceiros.

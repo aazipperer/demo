@@ -1,7 +1,0 @@
-com\accenture\core\schedulers\SimpleScheduledTaskTest.class
-com\accenture\core\testcontext\AppAemContext.class
-com\accenture\core\servlets\SimpleServletTest.class
-com\accenture\core\testcontext\AppAemContext$1.class
-com\accenture\core\models\HelloWorldModelTest.class
-com\accenture\core\listeners\SimpleResourceListenerTest.class
-com\accenture\core\filters\LoggingFilterTest.class
